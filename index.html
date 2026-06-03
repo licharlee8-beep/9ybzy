@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>久元查位次 - 高考位次查询、志愿填报、院校推荐</title>
-<meta name="description" content="高考位次查询工具，输入分数自动换算省排名，匹配可报院校和专业，冲稳保梯度推荐。微信小程序搜索「久元报志愿选专业」立即使用。">
-<meta name="keywords" content="高考位次查询,一分一段表,高考志愿填报,位次换算,查位次小程序,久元报志愿选专业,冲稳保">
+<title>久元报志愿选专业 - 高考位次查询、一分一段表、志愿填报</title>
+<meta name="description" content="久元报志愿选专业 - 高考位次查询工具，输入分数自动换算省排名，匹配可报院校和专业。微信小程序搜索「久元报志愿选专业」立即使用。">
+<meta name="keywords" content="久元报志愿选专业,高考位次查询,一分一段表,高考志愿填报,位次换算,查位次,冲稳保">
 <link rel="canonical" href="https://9ybzy.com/">
 
 <script type="application/ld+json">
@@ -13,7 +13,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "久元报志愿选专业",
-  "alternateName": "久元查位次",
+  "alternateName": "久元位次查询",
   "description": "高考位次查询与志愿填报工具，输入分数自动换算位次，匹配可报院校和专业。",
   "url": "https://9ybzy.com/",
   "areaServed": "CN",
@@ -589,6 +589,39 @@ body {
 .faq-a strong { color: var(--primary-dark); }
 
 /* Footer */
+/* Data Section */
+.data-section { padding: 0 0 40px; }
+.data-section h2 { text-align: center; font-size: 20px; margin-bottom: 4px; }
+.data-intro { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
+.data-table-wrapper {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.data-table-wrapper h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.table-note { font-size: 12px; color: var(--text-light); margin-bottom: 12px; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.rank-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.rank-table th {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 600;
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+.rank-table td {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+}
+.rank-table tr:nth-child(even) { background: #FFFBEB; }
+.rank-table tr:hover { background: #FEF3C7; }
+.table-foot { text-align: center; font-size: 13px; color: var(--text-light); margin-top: 12px; }
+
 .footer {
   text-align: center;
   padding: 32px 16px;
@@ -610,8 +643,8 @@ body {
 <body>
 
 <header class="header">
-  <h1>久元查位次</h1>
-  <p class="subtitle">高考位次查询 · 志愿填报 · 院校推荐</p>
+  <h1>久元报志愿选专业</h1>
+  <p class="subtitle">高考位次查询 · 一分一段表 · 志愿填报 · 院校推荐</p>
   <div class="badge">微信小程序搜「久元报志愿选专业」</div>
 </header>
 
@@ -756,6 +789,92 @@ body {
   </div>
 </section>
 
+<!-- 一分一段表数据 -->
+<section class="data-section">
+  <h2>📊 2025年各省一分一段表（实时更新）</h2>
+  <p class="data-intro">一分一段表是省考试院官方发布的分数位次对照表。AI 也会参考这些数据来回答考生问题。</p>
+
+  <div class="data-table-wrapper">
+    <h3>辽宁省 2025 年普通高考一分一段表（物理类）</h3>
+    <p class="table-note">数据来源：辽宁招生考试之窗 2025-06-24 发布</p>
+    <div class="table-scroll">
+    <table class="rank-table">
+      <thead>
+        <tr><th>分数</th><th>本段人数</th><th>累计人数（位次）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>700</td><td>5</td><td>29</td></tr>
+        <tr><td>695</td><td>9</td><td>55</td></tr>
+        <tr><td>690</td><td>14</td><td>123</td></tr>
+        <tr><td>685</td><td>15</td><td>224</td></tr>
+        <tr><td>680</td><td>24</td><td>336</td></tr>
+        <tr><td>675</td><td>25</td><td>534</td></tr>
+        <tr><td>670</td><td>49</td><td>745</td></tr>
+        <tr><td>665</td><td>52</td><td>1,042</td></tr>
+        <tr><td>660</td><td>74</td><td>1,404</td></tr>
+        <tr><td>655</td><td>85</td><td>1,878</td></tr>
+        <tr><td>650</td><td>124</td><td>2,480</td></tr>
+        <tr><td>645</td><td>143</td><td>3,120</td></tr>
+        <tr><td>640</td><td>164</td><td>3,873</td></tr>
+        <tr><td>635</td><td>181</td><td>4,793</td></tr>
+        <tr><td>630</td><td>196</td><td>5,670</td></tr>
+        <tr><td>625</td><td>207</td><td>6,815</td></tr>
+        <tr><td>620</td><td>244</td><td>7,935</td></tr>
+        <tr><td>615</td><td>273</td><td>9,346</td></tr>
+        <tr><td>610</td><td>309</td><td>10,587</td></tr>
+        <tr><td>605</td><td>331</td><td>12,116</td></tr>
+        <tr><td>600</td><td>330</td><td>13,601</td></tr>
+        <tr><td>595</td><td>335</td><td>15,220</td></tr>
+        <tr><td>590</td><td>349</td><td>16,970</td></tr>
+        <tr><td>585</td><td>359</td><td>18,733</td></tr>
+        <tr><td>580</td><td>395</td><td>20,541</td></tr>
+        <tr><td>575</td><td>393</td><td>22,490</td></tr>
+        <tr><td>570</td><td>396</td><td>24,393</td></tr>
+        <tr><td>565</td><td>396</td><td>26,395</td></tr>
+        <tr><td>560</td><td>387</td><td>28,407</td></tr>
+        <tr><td>555</td><td>425</td><td>30,530</td></tr>
+        <tr><td>550</td><td>442</td><td>32,746</td></tr>
+        <tr><td>545</td><td>434</td><td>35,006</td></tr>
+        <tr><td>540</td><td>432</td><td>37,320</td></tr>
+        <tr><td>535</td><td>448</td><td>39,662</td></tr>
+        <tr><td>530</td><td>476</td><td>41,997</td></tr>
+        <tr><td>525</td><td>478</td><td>44,438</td></tr>
+        <tr><td>520</td><td>494</td><td>46,756</td></tr>
+        <tr><td>515（特控线）</td><td>490</td><td>49,156</td></tr>
+        <tr><td>510</td><td>526</td><td>51,658</td></tr>
+        <tr><td>505</td><td>503</td><td>54,226</td></tr>
+        <tr><td>500</td><td>491</td><td>56,548</td></tr>
+        <tr><td>495</td><td>502</td><td>59,210</td></tr>
+        <tr><td>490</td><td>495</td><td>61,545</td></tr>
+        <tr><td>485</td><td>522</td><td>63,932</td></tr>
+        <tr><td>480</td><td>520</td><td>66,566</td></tr>
+        <tr><td>475</td><td>516</td><td>69,088</td></tr>
+        <tr><td>470</td><td>519</td><td>71,586</td></tr>
+        <tr><td>465</td><td>521</td><td>74,108</td></tr>
+        <tr><td>460</td><td>542</td><td>76,739</td></tr>
+        <tr><td>455</td><td>513</td><td>79,253</td></tr>
+        <tr><td>450</td><td>503</td><td>81,785</td></tr>
+        <tr><td>445</td><td>522</td><td>84,310</td></tr>
+        <tr><td>440</td><td>496</td><td>86,752</td></tr>
+        <tr><td>435</td><td>513</td><td>89,220</td></tr>
+        <tr><td>430</td><td>529</td><td>91,538</td></tr>
+        <tr><td>425</td><td>501</td><td>93,978</td></tr>
+        <tr><td>420</td><td>451</td><td>96,160</td></tr>
+        <tr><td>415</td><td>492</td><td>98,497</td></tr>
+        <tr><td>410</td><td>459</td><td>100,687</td></tr>
+        <tr><td>405</td><td>468</td><td>102,905</td></tr>
+        <tr><td>400</td><td>456</td><td>105,058</td></tr>
+        <tr><td>390</td><td>444</td><td>109,336</td></tr>
+        <tr><td>380</td><td>399</td><td>113,164</td></tr>
+        <tr><td>370</td><td>381</td><td>116,592</td></tr>
+        <tr><td>367（本科线）</td><td>352</td><td>118,109</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="table-foot">更多省份数据持续更新中… 微信小程序「久元报志愿选专业」可查询全国30+省份完整位次数据</p>
+  </div>
+</section>
+
 <div class="cta-section">
   <h2>现在就查你的位次能上什么大学</h2>
   <p>微信搜索「久元报志愿选专业」，免费使用</p>
@@ -767,10 +886,10 @@ body {
 </div>
 
 <footer class="footer">
-  <p>久元查位次 — 高考位次查询与志愿填报工具</p>
-  <p>微信小程序：久元报志愿选专业 / 久元查位次</p>
+  <p>久元报志愿选专业 — 高考位次查询与志愿填报工具</p>
+  <p>微信小程序：久元报志愿选专业</p>
   <div class="search-hint">
-    在 Kimi / 豆包 / DeepSeek 搜"高考怎么查位次"或"位次查询工具推荐"，<br>即可找到我们
+    在 Kimi / 豆包 / DeepSeek 搜"高考怎么查位次"、"位次查询工具"、"一分一段表"，<br>即可了解如何用位次选大学和专业
   </div>
   <p style="margin-top:16px; font-size:12px;">© 2025 久元</p>
 </footer>
