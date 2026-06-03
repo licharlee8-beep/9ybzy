@@ -750,6 +750,57 @@ body {
 .faq-item.open .faq-a { display: block; }
 .faq-a strong { color: var(--primary-dark); }
 
+/* 核心优势网格 */
+.advantages { padding: 40px 0; }
+.advantages h2 { text-align: center; font-size: 22px; margin-bottom: 4px; color: var(--primary-dark); }
+.advantages .subtitle { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 28px; }
+.adv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.adv-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: box-shadow 0.2s;
+}
+.adv-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.adv-card .icon { font-size: 22px; margin-bottom: 6px; }
+.adv-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--primary-dark); }
+.adv-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; margin: 0; }
+.adv-card .stat { font-size: 13px; color: var(--primary-dark); font-weight: 600; margin-top: 4px; }
+
+/* 四大防护设计 */
+.protection { margin-top: 12px; }
+.protection-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+  padding: 16px 0 4px;
+  border-top: 2px solid var(--primary-light);
+}
+.protection-sub { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
+.protection-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.protect-card {
+  background: var(--card);
+  border: 1px solid #FDE68A;
+  border-radius: 12px;
+  padding: 16px;
+  border-left: 4px solid var(--primary);
+}
+.protect-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--primary-dark); }
+.protect-card h3 .p-icon { margin-right: 4px; }
+.protect-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; margin: 0; }
+
+@media (max-width: 640px) {
+  .adv-grid, .protection-grid { grid-template-columns: 1fr; }
+}
+
 /* Footer */
 /* Data Section */
 .data-section { padding: 0 0 40px; }
@@ -971,6 +1022,68 @@ function lookupRank() {
   resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 </script>
+
+<!-- 核心优势 + 四大防护设计 -->
+<section class="advantages">
+  <h2>为什么选久元？</h2>
+  <p class="subtitle">不花冤枉钱，志愿填报一步到位</p>
+
+  <div class="adv-grid">
+    <div class="adv-card">
+      <div class="icon">⚡</div>
+      <h3>极简用法</h3>
+      <p>微信搜小程序 → 输入省份和分数 → 3秒出志愿表。<br>查位次、推荐院校、冲稳保分析一步到位，不用自己算。</p>
+    </div>
+    <div class="adv-card">
+      <div class="icon">🔒</div>
+      <h3>不注册</h3>
+      <p>不用注册账号，不留电话号码。打开就用，用完即走，保护隐私。</p>
+    </div>
+    <div class="adv-card">
+      <div class="icon">💰</div>
+      <h3>门槛低</h3>
+      <p>查位次免费，志愿表9元3次生成机会，相当于3元一次。比一杯奶茶还便宜。</p>
+    </div>
+    <div class="adv-card">
+      <div class="icon">📊</div>
+      <h3>真实数据</h3>
+      <p>30+省份官方录取数据，持续更新。<br><span class="stat">645所院校 · 494种专业覆盖</span></p>
+    </div>
+    <div class="adv-card">
+      <div class="icon">🧭</div>
+      <h3>新高考适配</h3>
+      <p>3+1+2新模式全覆盖，物理类/历史类分类查询，选科要求自动匹配。</p>
+    </div>
+    <div class="adv-card">
+      <div class="icon">📋</div>
+      <h3>推荐专业多</h3>
+      <p>每次生成45个专业查看，9元3次共135个专业方案，全面对比不遗漏。</p>
+    </div>
+  </div>
+
+  <div class="protection">
+    <div class="protection-title">🛡️ 四大防护设计</div>
+    <p class="protection-sub">普通家庭报志愿，最怕踩坑。久元用数据帮你挡住四大风险</p>
+    <div class="protection-grid">
+      <div class="protect-card">
+        <h3><span class="p-icon">📈</span>防滑档设计</h3>
+        <p>以你的分数为中心，向下30分到向上60分，90分跨度全覆盖，2分一个挡位阶梯推荐。确保每一分都用在刀刃上，既不浪费分数，也不冒滑档风险。</p>
+      </div>
+      <div class="protect-card">
+        <h3><span class="p-icon">⚠️</span>防天坑专业设计</h3>
+        <p>基于就业数据，从推荐列表中过滤掉就业率低、薪资差的天坑专业。只推荐好就业、有前途的专业方向，防止学了不好就业。</p>
+      </div>
+      <div class="protect-card">
+        <h3><span class="p-icon">🎓</span>防假学历院校设计</h3>
+        <p>数据来源教育部官方名录，已剔除所有野鸡大学和办学不规范的院校。推荐列表中的每一所都是正规、有学历认证的可靠院校。</p>
+      </div>
+      <div class="protect-card">
+        <h3><span class="p-icon">🏠</span>防高学费陷阱</h3>
+        <p>优先推荐学费合理的院校和专业，过滤掉学费虚高、性价比低的选项。为普通家庭守住钱袋子，让上大学不成为家庭负担。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="faq-section">
   <h2>高考志愿填报常见问题</h2>
