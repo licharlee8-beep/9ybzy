@@ -583,6 +583,9 @@ body {
 
 /* Rank Tool */
 .rank-tool-section { padding: 32px 0; }
+@media (max-width: 768px) {
+  .rank-tool-section { flex-direction: column !important; }
+}
 .rank-tool-section h2 { text-align: center; font-size: 20px; margin-bottom: 4px; }
 .tool-intro { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 24px; }
 .rank-tool {
@@ -864,18 +867,19 @@ body {
 
 <div class="container">
 
-<!-- 位次换算工具 -->
-<section class="rank-tool-section">
-  <h2>📱 查位次 · 看能上什么大学</h2>
-  <p class="tool-intro">输入省份和预估分数，系统自动换算你的全省位次</p>
+<!-- 位次换算工具 + 最新文章 -->
+<section class="rank-tool-section" style="display: flex; gap: 20px; align-items: flex-start;">
+  <div style="flex: 2; min-width: 0;">
+    <h2>📱 查位次 · 看能上什么大学</h2>
+    <p class="tool-intro">输入省份和预估分数，系统自动换算你的全省位次</p>
 
-  <div class="rank-tool">
-    <div class="tool-form">
-      <div class="form-group">
-        <label>省份</label>
-        <select id="province">
-          <option value="liaoning">辽宁省</option>
-        </select>
+    <div class="rank-tool">
+      <div class="tool-form">
+        <div class="form-group">
+          <label>省份</label>
+          <select id="province">
+            <option value="liaoning">辽宁省</option>
+          </select>
       </div>
       <div class="form-group">
         <label>选考科目</label>
@@ -918,6 +922,24 @@ body {
   </div>
 
   <p class="tool-foot">数据来源：各省教育考试院官方一分一段表 · 更多省份陆续添加中</p>
+  </div>
+
+  <!-- 最新文章侧栏 -->
+  <div class="articles-sidebar" style="flex: 1; min-width: 260px; background: #fff; border-radius: 8px; border: 1px solid #eee; padding: 16px;">
+    <h3 style="font-size: 16px; margin: 0 0 12px; color: #333;">最新文章</h3>
+    <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0;">
+      <a href="/articles/2026-06-04-chufen-diyibu.html" style="color: #D97706; text-decoration: none; font-size: 14px; line-height: 1.4; display: block;">高考出分后第一步做什么？90%的家长顺序是错的</a>
+      <span style="font-size: 11px; color: #999;">2026-06-04</span>
+    </div>
+    <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0;">
+      <a href="/articles/2026-06-04-weici-zhongyao.html" style="color: #D97706; text-decoration: none; font-size: 14px; line-height: 1.4; display: block;">什么是位次？为什么位次比高考分数重要？</a>
+      <span style="font-size: 11px; color: #999;">2026-06-04</span>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <a href="/articles/2026-06-04-tianya-zhongqi.html" style="color: #D97706; text-decoration: none; font-size: 14px; line-height: 1.4; display: block;">天涯社区重启！当年追《鬼吹灯》的那批人，孩子今年高考了</a>
+      <span style="font-size: 11px; color: #999;">2026-06-04</span>
+    </div>
+  </div>
 </section>
 
 <script>
@@ -1309,13 +1331,6 @@ function lookupRank() {
     <div class="cta-step"><span>①</span> 搜「久元报志愿选专业」</div>
     <div class="cta-step"><span>②</span> 输入省份和分数，生成志愿表</div>
   </div>
-</div>
-
-<div class="articles-section" style="margin: 24px 0; padding: 16px; background: #fff; border-radius: 8px; border: 1px solid #eee;">
-  <h2 style="font-size: 18px; margin: 0 0 12px;">最新文章</h2>
-  <div style="margin-bottom: 10px;"><a href="/articles/2026-06-04-chufen-diyibu.html" style="color: #D97706; text-decoration: none; font-size: 15px;">高考出分后第一步做什么？90%的家长顺序是错的</a><span style="font-size: 12px; color: #999; margin-left: 8px;">2026-06-04</span></div>
-  <div style="margin-bottom: 10px;"><a href="/articles/2026-06-04-weici-zhongyao.html" style="color: #D97706; text-decoration: none; font-size: 15px;">什么是位次？为什么位次比高考分数重要？</a><span style="font-size: 12px; color: #999; margin-left: 8px;">2026-06-04</span></div>
-  <div style="margin-bottom: 10px;"><a href="/articles/2026-06-04-tianya-zhongqi.html" style="color: #D97706; text-decoration: none; font-size: 15px;">天涯社区重启！当年追《鬼吹灯》的那批人，孩子今年高考了</a><span style="font-size: 12px; color: #999; margin-left: 8px;">2026-06-04</span></div>
 </div>
 
 <footer class="footer">
