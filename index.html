@@ -758,6 +758,10 @@ body {
 .advantages h2 { text-align: center; font-size: 22px; margin-bottom: 4px; color: var(--primary-dark); }
 .advantages .subtitle { text-align: center; font-size: 14px; color: var(--text-light); margin-bottom: 4px; }
 .advantages .tagline { text-align: center; font-size: 15px; color: var(--primary-dark); font-weight: 600; margin-bottom: 28px; }
+.adv-protect-row { display: flex; gap: 20px; align-items: flex-start; }
+.adv-col { flex: 3; min-width: 0; }
+.protect-col { flex: 2; min-width: 280px; }
+@media (max-width: 768px) { .adv-protect-row { flex-direction: column; } }
 .adv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1052,6 +1056,8 @@ function lookupRank() {
   <p class="subtitle">不花冤枉钱，志愿填报一步到位 · 645所院校 · 494种专业 · 30+省份官方数据</p>
   <p class="tagline">8年的思考与探索，10万+客户的翘首以盼</p>
 
+  <div class="adv-protect-row">
+  <div class="adv-col">
   <div class="adv-grid">
     <div class="adv-card">
       <div class="icon">⚡</div>
@@ -1084,7 +1090,9 @@ function lookupRank() {
       <p>每次生成45个专业查看，9元3次共135个专业方案，全面对比不遗漏。</p>
     </div>
   </div>
+  </div>
 
+  <div class="protect-col">
   <div class="protection">
     <div class="protection-title">🛡️ 四重防护设计</div>
     <p class="protection-sub">普通家庭报志愿，最怕踩坑。久元用数据帮你挡住四大风险</p>
@@ -1106,6 +1114,8 @@ function lookupRank() {
         <p>推荐列表中公办普通本科占比超过 90%，学费通常在 5000-6000 元/年。优先推荐收费合理、性价比高的公办院校，帮普通家庭守住钱袋子，让上大学不成为经济负担。</p>
       </div>
     </div>
+  </div>
+  </div>
   </div>
 </section>
 
