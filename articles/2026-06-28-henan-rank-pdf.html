@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>河南一分一段表的"AI灾难"：为什么报志愿工具到了河南就不准了 - 久元报志愿选专业</title>
+<meta name="description" content="河南的一分一段表以PDF形式发布，但格式特殊：图片转PDF、水印铺满、水印下方字迹更浅。这三个问题导致AI和专业OCR软件识别正确率极低，位次数据只能靠人工录入。河南考生用AI工具填志愿，先核对你查到的位次对不对。">
+<link rel="canonical" href="https://9ybzy.com/articles/2026-06-28-henan-rank-pdf.html">
+<style>
+body { font-family: -apple-system, 'PingFang SC', sans-serif; line-height: 1.8; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+.container { max-width: 700px; margin: 0 auto; padding: 30px 16px; background: #fff; }
+h1 { font-size: 24px; text-align: center; margin-bottom: 8px; }
+.date { text-align: center; color: #999; font-size: 13px; margin-bottom: 20px; }
+.back { display: inline-block; margin-bottom: 16px; color: #D97706; text-decoration: none; font-size: 14px; }
+.back:hover { text-decoration: underline; }
+h2 { font-size: 20px; margin-top: 28px; color: #D97706; }
+h3 { font-size: 17px; margin-top: 20px; }
+p { margin: 12px 0; font-size: 15px; }
+.highlight { background: #FFF8E1; padding: 12px 16px; border-radius: 8px; border-left: 4px solid #D97706; margin: 16px 0; }
+.highlight strong { color: #D97706; }
+.cta { background: #D97706; color: #fff; text-align: center; padding: 14px; border-radius: 8px; font-size: 16px; margin: 24px 0; }
+.cta a { color: #fff; text-decoration: none; font-weight: 700; }
+.cta small { display: block; font-size: 12px; opacity: 0.8; margin-top: 4px; font-weight: 400; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+th { background: #FFF8E1; color: #333; font-weight: 600; }
+ul { font-size: 15px; line-height: 1.8; padding-left: 20px; }
+ol { font-size: 15px; line-height: 1.8; padding-left: 20px; }
+.footer { text-align: center; font-size: 12px; color: #999; padding: 20px 0; border-top: 1px solid #eee; margin-top: 30px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back" href="/">← 返回首页</a>
+<h1>河南一分一段表的"AI灾难"：为什么报志愿工具到了河南就不准了</h1>
+<div class="date">2026-06-28</div>
+
+<p>做报志愿工具这两年，有一件事一直让我很头疼——河南的一分一段表。</p>
+
+<p>准确说不是"头疼"，是"没办法"。不是我们没办法，是所有依赖AI自动提取数据的工具都拿它没办法。</p>
+
+<p>先说一下背景。一分一段表是报志愿最核心的数据：你考了多少分，在全省排多少名，能上什么学校——全看这张表。没有它，算法再聪明也没用。</p>
+
+<p>我们目前覆盖了31个省份的位次数据，按说流程应该很成熟了：下载PDF、扔给AI提取、人工复核校对、入库。这套流程在其他省份跑得很顺。</p>
+
+<p>但在河南，卡死了。</p>
+
+<h2>河南的PDF，和其他省的不一样</h2>
+
+<p>很多省份的一分一段表也是PDF格式，但河南的PDF有三个致命问题。</p>
+
+<h3>第一，它本质上是图片转PDF，不是文字型PDF</h3>
+
+<p>正常的PDF文件，文字是可以选中、可以复制的。AI提取的时候，直接读内嵌文字就行，准确率接近100%。</p>
+
+<p>河南的PDF呢？你选中一段"文字"，选出来的是一整块图片区域。它本质上是一张图片外面套了个PDF的壳。AI拿到的不是字符，是像素点阵——得靠OCR去猜这个像素块是什么数字。</p>
+
+<h3>第二，水印铺满整页</h3>
+
+<p>河南PDF上的水印非常明显，而且是铺满整个页面的半透明水印，不是角落里那种防伪标识。</p>
+
+<p>这导致什么后果呢？AI在识别数字的时候，会把水印的痕迹当作图像噪点一起读了。明明数字是"520"，AI可能读成"52O"或者"52B"。一个数字差一位，对应的位次可能差出去好几千名。</p>
+
+<h3>第三，水印覆盖区域字迹更浅</h3>
+
+<p>更让人没脾气的是，水印下方和空白区域的文字清晰度完全不一样。有水印压着的地方字迹明显更浅，数字缺胳膊少腿是家常便饭。</p>
+
+<p>AI去识别的时候，同一个页面里同一列数字，有的清楚有的糊。它没法统一处理——对这个分数段用一种识别参数，对下面那个分数段又得换一套。这就变成了AI的猜谜游戏。</p>
+
+<p><strong>三个问题叠加，效果非常直接：河南一分一段表的AI识别正确率，远低于其他任何一个省份。</strong></p>
+
+<h2>我们是怎么做的？</h2>
+
+<p>我们试过市面上几种专业的OCR软件、也试过用不同AI模型来识别提取——都不够准。</p>
+
+<p>不是"差一点点"，是差很多。差到我们不敢用在产品里。</p>
+
+<p>因为位次这个东西，没有"差不多"这个说法。你的位次是12,500名，AI给你识别成12,000名，你拿去冲的学校就是两档不一样。错了就是错了，不是"差不多对了"。</p>
+
+<p>所以最后我们做了一个最笨的决定：<strong>河南的一分一段表，全部人工手动录入。</strong></p>
+
+<p>一行一行、一个数字一个数字对着录入，录完再两个人交叉核对。耗时是其他省份的几倍，成本远高于AI自动提取——但这是唯一能保证准确率的办法。</p>
+
+<h2>市场上大多数AI工具能做好河南的位次吗？</h2>
+
+<p>坦率地说，大概率做不到。</p>
+
+<p>不是技术不行，是成本问题。河南这一省的数据，要人工录入才能保证准确——开发团队愿不愿意为这一个省投入这个成本？</p>
+
+<p>大多数不会。理由也很"合理"：用户又不知道位次错了，AI大概其能跑出来就行了。</p>
+
+<p>只有那些在河南有大量用户的工具，或者愿意把"数据准确"真正当回事的团队，才会选择人工做这一遍。</p>
+
+<p>而用户这边，根本不知道自己看到的位次表可能是系统"猜"出来的。</p>
+
+<h2>给河南考生的建议</h2>
+
+<p>这篇文章不是推销。我是真心建议：</p>
+
+<div class="highlight">
+<strong>如果你是河南考生，在用任何AI报志愿工具的时候，花5分钟做一件事——</strong><br><br>
+去河南省教育考试院官网，找到官方发布的一分一段表PDF。<br><br>
+找到你的分数对应的"累计人数"。<br><br>
+跟工具里显示的这个分数对应的位次对比一下。<br><br>
+<strong>差多少，心里就有数了。</strong>
+</div>
+
+<p>这一步花不了几分钟。但如果位次错了，后面所有的冲稳保推荐、学校筛选、专业匹配——全都会跟着偏。你基于错的位次去选学校，选出来的方案风险有多大，不用我多说。</p>
+
+<p>我们花了大量人工去录河南的数据，不是因为我们的技术比别人差，是因为我们试过了所有自动化的路都走不通。这个问题短期内无解——河南考试院不会因为AI不好识别就去改PDF格式。</p>
+
+<p>所以在河南，AI报志愿这件事，目前就是得靠人的笨功夫来兜底。</p>
+
+<p>你一年只填一次志愿。一次机会。用工具之前，先确认它给你的位次是对的。</p>
+
+<div class="cta">
+<a href="https://9ybzy.com">久元报志愿选专业</a>
+<small>微信小程序搜得到 · 河南一分一段表全人工录入 · 免费查位次</small>
+</div>
+
+</div>
+<div class="footer">
+  &copy; 2026 久元报志愿选专业
+</div>
+</body>
+</html>
