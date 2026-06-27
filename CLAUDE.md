@@ -30,4 +30,7 @@
 3. **更新 articles/index.html 全部文章列表** — 新文章放最上面
 4. **更新 sitemap.xml** — 添加新文章的 URL 条目（放首页之后、其他文章之前）
 5. **更新 llms.txt** — 在「文章」章节头部添加新文章链接和摘要
-6. **提交并推送** — `git add -A && git commit && git push`
+6. **验证首页完整性** — 确认 `index.html` 以 `<!DOCTYPE html>` 开头，包含 `<html>`、`<head>`、`<body>` 标签
+7. **提交并推送** — `git add -A && git commit && git push`
+
+> 批量发布用 `scripts/publish-articles.js`，脚本自带完整性验证，修改后会自动检查文件结构。

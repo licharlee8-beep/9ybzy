@@ -242,4 +242,27 @@ sitemapContent = sitemapContent.substring(0, insertPos) + newUrls + sitemapConte
 fs.writeFileSync(SITEMAP_PATH, sitemapContent, 'utf8');
 console.log('=== sitemap.xml 已更新 ===');
 
+// ===== 验证 index.html 完整性 =====
+function validateHtml(filePath, label) {
+  var content = fs.readFileSync(filePath, 'utf8');
+  var errors = [];
+  if (content.indexOf('<!DOCTYPE html>') !== 0) errors.push('缺少 DOCTYPE 声明（文件开头不是 <!DOCTYPE html>）');
+  if (content.indexOf('<html') === -1) errors.push('缺少 <html> 标签');
+  if (content.indexOf('<head>') === -1) errors.push('缺少 <head> 标签');
+  if (content.indexOf('</head>') === -1) errors.push('缺少 </head> 标签');
+  if (content.indexOf('<body') === -1) errors.push('缺少 <body> 标签');
+  if (content.indexOf('</body>') === -1) errors.push('缺少 </body> 标签');
+  if (content.indexOf('</html>') === -1) errors.push('缺少 </html> 标签');
+
+  if (errors.length > 0) {
+    console.error('\n❌ ' + label + ' 完整性验证失败：');
+    errors.forEach(function(e) { console.error('   - ' + e); });
+    process.exit(1);
+  }
+  console.log('   ✓ ' + label + ' 完整性通过（DOCTYPE/html/head/body 齐全）');
+}
+
+validateHtml(HOMEPAGE, '首页');
+validateHtml(ARTICLES_INDEX, '文章列表页');
+
 console.log('\n✅ 全部完成！共发布 ' + createdFiles.length + ' 篇文章');
