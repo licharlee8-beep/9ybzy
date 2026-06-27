@@ -7,7 +7,13 @@
     <priority>1.0</priority>
   </url>
         <url>
-    <loc>https://9ybzy.com/articles/2026-06-28-henan-fusheng.html</loc>
+    <loc>https://9ybzy.com/articles/2026-06-28-jiangxi-no-985.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+        <url>
+    <loc>https://9ybzy.com/articles/2026-06-28-guangdong-university.html</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -18,6 +24,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+	  <url>
+	    <loc>https://9ybzy.com/articles/2026-06-28-anhui-delta.html</loc>
+	    <lastmod>2026-06-28</lastmod>
+	    <changefreq>weekly</changefreq>
+	    <priority>0.8</priority>
+	  </url>
   <url>
     <loc>https://9ybzy.com/articles/2026-06-27-henan-guide.html</loc>
     <lastmod>2026-06-27</lastmod>
