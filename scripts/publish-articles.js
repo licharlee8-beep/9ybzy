@@ -11,6 +11,14 @@ const SITEMAP_PATH = SITE_DIR + '/sitemap.xml';
 const ARTICLES_INDEX = ARTICLES_DIR + '/index.html';
 const HOMEPAGE = SITE_DIR + '/index.html';
 
+// ===== 日期 =====
+const TODAY = new Date();
+const Y = TODAY.getFullYear();
+const M = String(TODAY.getMonth() + 1).padStart(2, '0');
+const D = String(TODAY.getDate()).padStart(2, '0');
+const SLUG_DATE = Y + '-' + M + '-' + D;
+const DISPLAY_DATE = Y + '年' + parseInt(M) + '月' + parseInt(D) + '日';
+
 // 文章配置: [文件名前缀, slug, 标题, 描述]
 const ARTICLES = [
   ['article-25-位次不用注册.md', '2026-06-28-weici-no-register',
@@ -64,7 +72,7 @@ h1 { font-size: 24px; line-height: 1.4; }
 <div class="container">
   <a href="/" class="back">← 返回首页</a>
   <h1>${title}</h1>
-  <p class="article-meta">2026年6月27日 · 久元报志愿</p>
+  <p class="article-meta">${DISPLAY_DATE} · 久元报志愿</p>
 
   <div class="article-content">
 ${bodyContent}
@@ -170,7 +178,7 @@ var oldSidebar = homepageContent.substring(sidebarStart, sidebarEnd2 + 6);
 var newSidebarItems = '';
 for (var i = 0; i < Math.min(createdFiles.length, 5); i++) {
   var a = createdFiles[i];
-  newSidebarItems += '    <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0;"><a href="/articles/' + a.slug + '.html" style="color: #D97706; text-decoration: none; font-size: 14px; line-height: 1.4; display: block;">' + a.title + '</a><span style="font-size: 11px; color: #999;">2026-06-28</span></div>\n';
+  newSidebarItems += '    <div style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f0f0f0;"><a href="/articles/' + a.slug + '.html" style="color: #D97706; text-decoration: none; font-size: 14px; line-height: 1.4; display: block;">' + a.title + '</a><span style="font-size: 11px; color: #999;">' + SLUG_DATE + '</span></div>\n';
 }
 
 var newSidebar = '    <div class="articles-sidebar">\n    <h3 style="font-size: 16px; margin: 0 0 12px; color: #333;">最新文章</h3>\n' + newSidebarItems + '    <p style="margin: 12px 0 0; font-size: 12px; color: #999; text-align: center;"><a href="/articles/" style="color: #D97706;">查看全部文章 →</a></p>\n  </div>';
@@ -187,7 +195,7 @@ var listEnd = articlesIndexContent.indexOf('</ul>', listStart);
 var newItems = '';
 for (var i = 0; i < createdFiles.length; i++) {
   var a = createdFiles[i];
-  newItems += '    <li>\n      <a href="/articles/' + a.slug + '.html">' + a.title + '</a>\n      <div class="date">2026-06-28</div>\n    </li>\n';
+  newItems += '    <li>\n      <a href="/articles/' + a.slug + '.html">' + a.title + '</a>\n      <div class="date">' + SLUG_DATE + '</div>\n    </li>\n';
 }
 
 var oldList = articlesIndexContent.substring(listStart, listEnd + 5);
@@ -235,7 +243,7 @@ var insertPos = sitemapContent.indexOf(insertAfter) + insertAfter.length;
 var newUrls = '';
 for (var i = 0; i < createdFiles.length; i++) {
   var a = createdFiles[i];
-  newUrls += '\n        <url>\n    <loc>https://9ybzy.com/articles/' + a.slug + '.html</loc>\n    <lastmod>2026-06-28</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>';
+  newUrls += '\n        <url>\n    <loc>https://9ybzy.com/articles/' + a.slug + '.html</loc>\n    <lastmod>' + SLUG_DATE + '</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>';
 }
 
 sitemapContent = sitemapContent.substring(0, insertPos) + newUrls + sitemapContent.substring(insertPos);
