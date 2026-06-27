@@ -64,7 +64,7 @@ h1 { font-size: 24px; line-height: 1.4; }
 <div class="container">
   <a href="/" class="back">← 返回首页</a>
   <h1>${title}</h1>
-  <p class="article-meta">2026年6月28日 · 高考志愿填报</p>
+  <p class="article-meta">2026年6月27日 · 久元报志愿</p>
 
   <div class="article-content">
 ${bodyContent}
