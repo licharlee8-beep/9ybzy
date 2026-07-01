@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>久元推荐引擎重大更新：校园生活分权重提到首位，食堂空调宿舍成为选校硬指标 - 久元报志愿选专业</title>
+<meta name="description" content="久元报志愿推荐系统完成重大升级：校园生活标签超过传统匹配分，成为推荐排序的第一权重。食堂好不好吃、宿舍有没有空调、是不是上床下桌——这些以前被忽略的维度，现在直接影响你看到的学校推荐顺序。">
+<link rel="canonical" href="https://9ybzy.com/">
+<style>
+body { font-family: -apple-system, 'PingFang SC', sans-serif; margin: 0; padding: 0; background: #f5f5f5; color: #333; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px 16px; }
+h1 { font-size: 24px; line-height: 1.4; }
+.article-meta { color: #999; font-size: 13px; margin: 8px 0 20px; }
+.article-content { font-size: 16px; line-height: 1.8; }
+.article-content p { margin: 16px 0; }
+.article-content h2 { margin: 32px 0 12px; font-size: 20px; border-left: 4px solid #D97706; padding-left: 12px; }
+.article-content h3 { margin: 24px 0 8px; font-size: 18px; color: #D97706; }
+.article-content strong { color: #D97706; }
+.cta { background: #D97706; color: #fff; text-align: center; padding: 16px; border-radius: 12px; margin: 24px 0; font-size: 15px; }
+.cta a { color: #fff; text-decoration: none; font-weight: 600; }
+.footer { text-align: center; font-size: 12px; color: #999; padding: 20px 0; }
+.back { display: inline-block; margin-bottom: 16px; color: #D97706; text-decoration: none; font-size: 14px; }
+.tip-box { background: #FFF8F0; border-left: 4px solid #D97706; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+.warn-box { background: #FFF0F0; border-left: 4px solid #E53E3E; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+.highlight-box { background: #F0FFF4; border-left: 4px solid #38A169; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+td, th { border: 1px solid #ddd; padding: 10px 12px; text-align: left; }
+th { background: #f9f9f9; font-weight: 600; }
+.code-box { background: #1e1e1e; color: #d4d4d4; padding: 16px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 16px 0; overflow-x: auto; }
+.code-box .comment { color: #6A9955; }
+.code-box .keyword { color: #569CD6; }
+.code-box .number { color: #B5CEA8; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<a class="back" href="/">← 返回首页</a>
+<h1>久元推荐引擎重大更新：校园生活分权重提到首位，食堂空调宿舍成为选校硬指标</h1>
+<div class="article-meta">2026年7月1日 · 久元报志愿选专业 · 产品更新</div>
+
+<div class="article-content">
+
+<div class="highlight-box">
+<strong>一句话总结：</strong>从现在开始，你在久元选择"保食堂、保空调、保宿舍"后，系统会优先推荐和你生活偏好匹配的学校——匹配度高的学校排在最前面，哪怕它的分数匹配度不是最高的。
+</div>
+
+<p>这次更新不是加了个新按钮那么简单，而是<strong>推荐引擎底层逻辑的一次调整</strong>。</p>
+
+<h2>改了什么：排序逻辑变了</h2>
+
+<p>以前久元的推荐系统是这样排序的：</p>
+
+<p><strong>先看分数匹配度 → 再看学校实力 → 最后看生活标签</strong></p>
+
+<p>如果你的分数够得上某所好学校，但它的宿舍条件很差、食堂不好吃，系统还是会把它排在前面——因为"匹配分"优先。</p>
+
+<p>现在不一样了：</p>
+
+<p><strong>生活偏好匹配 → 分数匹配度 → 学校实力</strong></p>
+
+<p>你选了"有空调""上床下桌""独立卫浴"之后，系统会把同时满足这些条件的学校提到最前面。哪怕你的分数上这所学校稍微有点"亏"，但只要生活条件对得上，它就会出现在更靠前的位置。</p>
+
+<div class="code-box">
+<span class="comment">// 现在的排序逻辑（简化版）</span><br>
+function sortSchools(a, b) {<br>
+&nbsp; <span class="comment">// 第一步：生活分高的排前面</span><br>
+&nbsp; <strong>if (b.livingScore !== a.livingScore)</strong><br>
+&nbsp; &nbsp; <strong>return b.livingScore - a.livingScore;</strong><br>
+&nbsp; <span class="comment">// 第二步：分数匹配度</span><br>
+&nbsp; if (b.matchScore !== a.matchScore)<br>
+&nbsp; &nbsp; return b.matchScore - a.matchScore;<br>
+&nbsp; <span class="comment">// 第三步：录取概率</span><br>
+&nbsp; return a.gap - b.gap;<br>
+}
+</div>
+
+<p>这个改动看起来不大，但效果很明显。</p>
+
+<h2>为什么这么做？</h2>
+
+<p>今年填报季，我们陆续收到了大量考生的反馈。发现一个很有意思的现象：</p>
+
+<p>很多考生来找我们做方案的时候，分数和专业范围确定之后，问得最多的问题不是"这所学校就业怎么样"，而是——</p>
+
+<p>"这学校宿舍有空调吗？"<br>
+"食堂好吃吗？"<br>
+"是上床下桌还是上下铺？"</p>
+
+<p>一开始我们以为只是少数人在意这些。直到我们分析了用户行为数据：<strong>超过六成的考生在查看学校详情时会点开校园生活标签</strong>，而且停留时间不短，说明真的在看、在对比。</p>
+
+<p>数据不会撒谎。对考生来说，食堂好不好吃、宿舍有没有空调、洗澡要不要去公共澡堂——这些"生活小事"直接决定了大学四年的幸福感，一点也不"小"。</p>
+
+<p>所以这次我们把排序逻辑改了。既然大家在意，那就让它真正影响推荐结果，而不是只在详情页里当个摆设。</p>
+
+<h2>这套系统是怎么工作的？</h2>
+
+<p>这次升级背后涉及两个核心部分：</p>
+
+<h3>1. 校园生活标签数据库</h3>
+<p>我们为全国 <strong>300+ 所本科院校</strong>建立了生活标签档案，每个学校标注了：</p>
+
+<ul>
+  <li><strong>宿舍配置</strong>：是否有空调、暖气，是上床下桌还是上下铺，几人间，有没有独立卫浴</li>
+  <li><strong>食堂质量</strong>：有没有"食堂好吃"标签（来自在校生口碑交叉验证）</li>
+  <li><strong>校园环境</strong>：是否近地铁、校区位置等</li>
+</ul>
+
+<p>数据来源：2025-2026年软科大学生满意度调查、各校官网招生信息、百度百科、教育部阳光高考平台、在校生网络公开反馈。每条数据都经过至少两个来源交叉验证。</p>
+
+<h3>2. 生活分（livingScore）算法</h3>
+<p>你在进入推荐时选择的生活偏好（如"有空调""上床下桌""独立卫浴""四人间""食堂好吃"等），系统会逐一匹配目标学校的生活标签——</p>
+
+<ul>
+  <li><strong>匹配度计算</strong>：你选了N个偏好，学校和其中M个匹配上 → livingScore = M</li>
+  <li><strong>排序权重</strong>：livingScore 最高的学校排最前面；得分相同时，再按分数匹配度排序</li>
+  <li><strong>覆盖所有推荐类型</strong>：这个逻辑同时作用于冲、稳、保三类推荐，而不是只影响某一类</li>
+</ul>
+
+<div class="tip-box">
+<strong>举个例子：</strong>你选了"有空调 + 上床下桌 + 四人间 + 独立卫浴"四个偏好，系统给每所学校打分：<br>
+- 学校A：4个全中 → livingScore = 4（排最前）<br>
+- 学校B：中了3个 → livingScore = 3（排第二）<br>
+- 学校C：只中了1个 → livingScore = 1（排后面）<br>
+即使学校C的分数匹配度更高，只要你的偏好明确，生活条件好的学校会优先展示。
+</div>
+
+<h2>250组测试验证：效果稳定</h2>
+
+<p>升级完成后，我们对全平台数据做了大规模的回归测试：</p>
+
+<ul>
+  <li><strong>覆盖范围</strong>：25个省份（本科批未截止的全部省份）</li>
+  <li><strong>测试组数</strong>：每省10个分数段（410-500分），共250组</li>
+  <li><strong>推荐总量</strong>：近10,000条推荐记录</li>
+</ul>
+
+<p>测试结果：所有推荐中高职专科占位为<strong>0%</strong>，生活分匹配逻辑正常运作，没有出现因权重调整导致的推荐异常。</p>
+
+<h2>写在最后</h2>
+
+<p>这次更新想表达一个态度：<strong>选大学不只是选一个学校的名字和分数线，而是选你要生活四年的地方。</strong></p>
+
+<p>以前市面上的志愿填报工具，几乎都把全部精力放在"分数够不够"上。分数当然重要——分数不够什么都谈不上。但分数够的前提下，住得舒不舒服、吃得开不开心，同样重要。</p>
+
+<p>吃好睡好，才有精力学好。这不是鸡汤，是真实的大学四年。</p>
+
+<p>打开久元报志愿，试试新的"保食堂、保空调、保宿舍"功能——选出分数够、专业好、生活也舒服的学校。</p>
+
+<div class="cta">
+  <a href="/">微信搜索「久元报志愿选专业」→ 体验新版推荐系统</a>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>© 久元报志愿选专业 — 用数据帮普通家庭报好志愿</p>
+</div>
+
+</div>
+</body>
+</html>
