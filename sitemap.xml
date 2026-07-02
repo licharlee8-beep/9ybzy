@@ -6,6 +6,30 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
           <url>
+    <loc>https://9ybzy.com/articles/2026-07-01-deadline-reminder.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://9ybzy.com/articles/2026-07-02-zhuan-ke-guide.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://9ybzy.com/articles/2026-07-02-deadline-roundup.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://9ybzy.com/articles/2026-07-02-zhengji-zhiyuan.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+          <url>
     <loc>https://9ybzy.com/articles/2026-07-01-recommend-upgrade.html</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
