@@ -7,7 +7,19 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://9ybzy.com/articles/2026-08-14-zhuanke-zhuanshengben-plan.html</loc>
+    <loc>  <url>
+    <loc>https://9ybzy.com/articles/2026-08-16-tongzhishu-fangzha.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://9ybzy.com/articles/2026-08-16-weici-wuqu-huadang.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+https://9ybzy.com/articles/2026-08-14-zhuanke-zhuanshengben-plan.html</loc>
     <lastmod>2026-08-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
